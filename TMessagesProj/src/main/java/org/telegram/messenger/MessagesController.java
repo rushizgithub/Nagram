@@ -4213,7 +4213,7 @@ public class MessagesController extends BaseController implements NotificationCe
                 MessageObject existMessageObject = dialogMessagesByIds.get(message.id);
                 if (existMessageObject != null) {
                     existMessageObject.messageOwner.media = MessageObject.getMedia(message);
-                    if (MessageObject.getMedia(message).ttl_seconds != 0 && (MessageObject.getMedia(message).photo instanceof TLRPC.TL_photoEmpty || MessageObject.getMedia(message).document instanceof TLRPC.TL_documentEmpty)) {
+                    if (!MessageObject.isSecretMedia(message) && MessageObject.getMedia(message).ttl_seconds != 0 && (MessageObject.getMedia(message).photo instanceof TLRPC.TL_photoEmpty || MessageObject.getMedia(message).document instanceof TLRPC.TL_documentEmpty)) {
                         existMessageObject.setType();
                         getNotificationCenter().postNotificationName(NotificationCenter.notificationsSettingsUpdated);
                     }

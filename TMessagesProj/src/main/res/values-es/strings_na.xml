@@ -65,7 +65,7 @@
     <string name="CustomPoor">Palabra de respuesta personalizada al mantener presionado</string>
     <string name="CustomPoorHint">Grupo predeterminado</string>
     <string name="CustomEditedMessage">Palabra de mensaje editado personalizada</string>
-    <string name="FakeHighPerformanceDevice">Falsear como dispositivo de alto rendimiento</string>
+    <string name="FakeLowPerformanceDevice">Falsear como dispositivo de alto rendimiento</string>
     <string name="DisableEmojiDrawLimit">Deshabilitar el límite de dibujo de Emoji</string>
     <string name="IconDecoration">Decoración de icono</string>
     <string name="NotificationIcon">Icono de notificación</string>

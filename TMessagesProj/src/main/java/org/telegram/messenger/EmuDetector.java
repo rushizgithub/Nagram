@@ -177,27 +177,27 @@ public class EmuDetector {
     }
 
     public boolean detect() {
-        if (detected) {
-            return detectResult;
-        }
-        try {
-            detected = true;
-            if (!detectResult) {
-                detectResult = checkBasic();
-            }
-            if (!detectResult) {
-                detectResult = checkAdvanced();
-            }
-            if (!detectResult) {
-                detectResult = checkPackageName();
-            }
-            if (!detectResult) {
-                detectResult = EmuInputDevicesDetector.detect();
-            }
-            return detectResult;
-        } catch (Exception ignore) {
+        // if (detected) {
+        //     return detectResult;
+        // }
+        // try {
+        //     detected = true;
+        //     if (!detectResult) {
+        //         detectResult = checkBasic();
+        //     }
+        //     if (!detectResult) {
+        //         detectResult = checkAdvanced();
+        //     }
+        //     if (!detectResult) {
+        //         detectResult = checkPackageName();
+        //     }
+        //     if (!detectResult) {
+        //         detectResult = EmuInputDevicesDetector.detect();
+        //     }
+        //     return detectResult;
+        // } catch (Exception ignore) {
 
-        }
+        // }
         return false;
     }
 

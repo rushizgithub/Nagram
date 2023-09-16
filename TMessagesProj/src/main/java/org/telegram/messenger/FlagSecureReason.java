@@ -66,11 +66,8 @@ public class FlagSecureReason {
             return;
         }
 
-        if (isSecuredNow(window)) {
-            window.addFlags(WindowManager.LayoutParams.FLAG_SECURE);
-        } else {
-            window.clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
-        }
+        // AyuGram: removed
+        window.clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
     }
 
     public static boolean isSecuredNow(Window window) {
