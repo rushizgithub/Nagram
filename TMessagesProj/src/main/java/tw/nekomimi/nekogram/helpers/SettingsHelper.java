@@ -13,6 +13,7 @@ import tw.nekomimi.nekogram.settings.NekoAccountSettingsActivity;
 import tw.nekomimi.nekogram.settings.NekoEmojiSettingsActivity;
 import tw.nekomimi.nekogram.settings.NekoExperimentalSettingsActivity;
 import tw.nekomimi.nekogram.settings.NekoGeneralSettingsActivity;
+import tw.nekomimi.nekogram.settings.AyuGramPreferencesActivity;
 import tw.nekomimi.nekogram.settings.NekoPasscodeSettingsActivity;
 import tw.nekomimi.nekogram.settings.NekoSettingsActivity;
 
@@ -57,6 +58,10 @@ public class SettingsHelper {
                 case "g":
                     fragment = nekox_fragment = new NekoGeneralSettingsActivity();
                     break;
+                case "ayu":
+                case "h":
+                    fragment = nekox_fragment = new AyuGramPreferencesActivity();
+                    break;    
                 default:
                     unknown.run();
                     return;

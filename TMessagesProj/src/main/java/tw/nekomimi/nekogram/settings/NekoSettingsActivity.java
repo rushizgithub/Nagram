@@ -81,6 +81,7 @@ public class NekoSettingsActivity extends BaseFragment {
     private int chatRow;
     private int passcodeRow;
     private int experimentRow;
+    private int ayuRow;
     private int categories2Row;
 
     private int aboutRow;
@@ -183,6 +184,8 @@ public class NekoSettingsActivity extends BaseFragment {
                 presentFragment(new NekoPasscodeSettingsActivity());
             } else if (position == experimentRow) {
                 presentFragment(new NekoExperimentalSettingsActivity());
+            } else if (position == ayuRow) {
+                presentFragment(new AyuGramPreferencesActivity());
             } else if (position == channelRow) {
                 MessagesController.getInstance(currentAccount).openByUserName("nagram_channel", this, 1);
             } else if (position == translationRow) {
@@ -396,6 +399,7 @@ public class NekoSettingsActivity extends BaseFragment {
             passcodeRow = -1;
         }
         experimentRow = rowCount++;
+        ayuRow = rowCount++;
         categories2Row = rowCount++;
 
         aboutRow = rowCount++;
@@ -492,6 +496,8 @@ public class NekoSettingsActivity extends BaseFragment {
                     } else if (position == experimentRow) {
                         textCell.setTextAndIcon(LocaleController.getString("Experiment", R.string.Experiment), R.drawable.msg_fave, true);
                     } else if (position == accountRow) {
+                        textCell.setTextAndIcon(LocaleController.getString("AyuGram", R.string.AyuPreferences), R.drawable.msg2_reactions2, true);
+                    } else if (position == ayuRow) {
                         textCell.setTextAndIcon(LocaleController.getString("Account", R.string.Account), R.drawable.menu_contacts, true);
                     }
                     break;
@@ -572,7 +578,7 @@ public class NekoSettingsActivity extends BaseFragment {
         public int getItemViewType(int position) {
             if (position == categories2Row || position == about2Row) {
                 return 1;
-            } else if (position == chatRow || position == accountRow || position == generalRow || position == passcodeRow || position == experimentRow) {
+            } else if (position == chatRow || position == accountRow || position == generalRow || position == passcodeRow || position == experimentRow || position == ayuRow) {
                 return 2;
             } else if (position == categoriesRow || position == aboutRow) {
                 return 4;
