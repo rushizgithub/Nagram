@@ -495,9 +495,9 @@ public class NekoSettingsActivity extends BaseFragment {
                         textCell.setTextAndIcon(LocaleController.getString("PasscodeNeko", R.string.PasscodeNeko), R.drawable.msg_permissions, true);
                     } else if (position == experimentRow) {
                         textCell.setTextAndIcon(LocaleController.getString("Experiment", R.string.Experiment), R.drawable.msg_fave, true);
-                    } else if (position == accountRow) {
-                        textCell.setTextAndIcon(LocaleController.getString("AyuGram", R.string.AyuPreferences), R.drawable.msg2_reactions2, true);
                     } else if (position == ayuRow) {
+                        textCell.setTextAndIcon(LocaleController.getString("AyuGram", R.string.AyuPreferences), R.drawable.msg2_reactions2, true);
+                    } else if (position == accountRow) {
                         textCell.setTextAndIcon(LocaleController.getString("Account", R.string.Account), R.drawable.menu_contacts, true);
                     }
                     break;
